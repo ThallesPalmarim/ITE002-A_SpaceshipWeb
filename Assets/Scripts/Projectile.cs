@@ -4,12 +4,12 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 25f;
 
-    private void Update()
+    void Update()
     {
         transform.Translate(Time.deltaTime * speed * Vector3.up);
     }
 
-    private void OnBecameInvisible()
+    void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
